@@ -20,23 +20,28 @@
     }
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     header p {
       margin: 0.5rem 0;
+      font-size: 1.1rem;
     }
     nav a {
       color: #fff;
       margin: 0 1rem;
       text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     section {
       max-width: 900px;
       margin: 2rem auto;
-      padding: 1rem;
+      padding: 1.5rem;
       background: #fff;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
     h2 {
       border-bottom: 2px solid #eee;
@@ -44,12 +49,6 @@
     }
     ul {
       padding-left: 1.2rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #777;
     }
     .btn {
       display: inline-block;
@@ -59,30 +58,63 @@
       color: white;
       text-decoration: none;
       border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #135bc4;
     }
     .project {
       margin-bottom: 1.5rem;
     }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .timeline {
+      border-left: 3px solid #1a73e8;
+      padding-left: 1rem;
+      margin-left: 1rem;
+    }
+    .timeline-item {
+      margin-bottom: 1.5rem;
+    }
+    .timeline-item h4 {
+      margin-bottom: 0.2rem;
+    }
+    .timeline-item span {
+      color: #666;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
-  <header>
+  <header class="fade-in">
     <h1>Neelambuj Chaturvedi</h1>
     <p>Senior Data Scientist | ML Engineer | MLOps Enthusiast</p>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
       <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="about">
+  <section id="about" class="fade-in">
     <h2>About Me</h2>
     <p>I am a Senior Data Scientist with experience in building and deploying machine learning systems at scale. I specialize in predictive modeling, MLOps, and business-focused AI solutions with end-to-end deployment and stakeholder collaboration.</p>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="fade-in">
     <h2>Featured Projects</h2>
     <div class="project">
       <h3>Return to Origin Prediction @ GoKwik</h3>
@@ -102,13 +134,39 @@
     </div>
   </section>
 
-  <section id="resume">
+  <section id="experience" class="fade-in">
+    <h2>Experience Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>Senior Data Scientist @ Walmart Global Tech</h4>
+        <span>Jul 2022 – Present</span>
+        <p>Building a Vision + NLP-based HTS code classification model for import/export compliance on Walmart Marketplace.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Applied Scientist 2 @ GoKwik</h4>
+        <span>Oct 2022 – Jul 2025</span>
+        <p>Led RTO prediction, pLTV models, and real-time deployments serving millions of requests/day. Stakeholder management and mentoring included.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Senior Data Scientist @ Accern AI</h4>
+        <span>Jan 2022 – Sep 2022</span>
+        <p>Built active learning + BERT engine for automated document labeling; cut costs by 40%.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>DS Associate Consultant @ ZS Associates</h4>
+        <span>Jul 2019 – Dec 2021</span>
+        <p>PU learning models, NASH prediction (Nature + Gastro publications), RA CV challenge finalist.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="fade-in">
     <h2>Resume</h2>
     <p>You can view/download my latest resume using the link below:</p>
     <a href="Neelambuj_Resume_19July25.pdf" class="btn" target="_blank">Download Resume (PDF)</a>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="fade-in">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:Neelambuj.nitj@gmail.com">Neelambuj.nitj@gmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/neelambuj-chaturvedi-981425103/" target="_blank">Profile</a></p>

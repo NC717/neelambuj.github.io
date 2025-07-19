@@ -10,151 +10,151 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neelambuj Chaturvedi | Data Scientist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #f3f4f6;
-      color: #111827;
-      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .navbar {
+      background-color: #1f2937;
+    }
+    .navbar-brand, .nav-link, .nav-link:focus, .nav-link:hover {
+      color: #f8f9fa;
     }
     header {
       background: linear-gradient(to right, #1f2937, #111827);
       color: #fff;
+      padding: 4rem 0;
       text-align: center;
-      padding: 3rem 1rem 2rem;
     }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-    nav {
-      margin-top: 1rem;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: #cbd5e1;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ffffff;
+    footer {
+      background-color: #1f2937;
+      color: #9ca3af;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
     }
     section {
-      max-width: 960px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      animation: fadeInUp 0.5s ease-in;
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      padding: 4rem 1rem;
     }
     h2 {
       border-bottom: 2px solid #e5e7eb;
       padding-bottom: 0.5rem;
-      color: #1f2937;
+      margin-bottom: 2rem;
     }
-    .project, .timeline-item {
+    .card {
       margin-bottom: 1.5rem;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.7rem 1.3rem;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s;
+    .btn-primary {
+      background-color: #2563eb;
+      border: none;
     }
-    .btn:hover {
-      background: #1d4ed8;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      background: #1f2937;
-      color: #9ca3af;
+    .btn-primary:hover {
+      background-color: #1d4ed8;
     }
   </style>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Neelambuj Chaturvedi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <header>
     <h1>Neelambuj Chaturvedi</h1>
-    <p>Senior Data Scientist | ML Engineer | MLOps Enthusiast</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <p>Senior Data Scientist</p>
   </header>
 
-  <section id="about">
+  <section id="about" class="container">
     <h2>About Me</h2>
     <p>I specialize in delivering scalable machine learning systems and have led multiple production-ready model deployments across predictive modeling, NLP, and computer vision. My strengths lie in MLOps pipelines, stakeholder collaboration, and mentoring teams toward business-aligned outcomes.</p>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="container">
     <h2>Featured Projects</h2>
-    <div class="project">
-      <h3>🔁 RTO Prediction @ GoKwik</h3>
-      <p>XGBoost model served 2M+ real-time requests/day and reduced RTO by 40% (₹50M savings annually).</p>
-    </div>
-    <div class="project">
-      <h3>📈 pLTV Prediction System</h3>
-      <p>Real-time gradient boosting system for customer event scoring (5M+ requests/day); 10–15% ROAS boost.</p>
-    </div>
-    <div class="project">
-      <h3>🏥 RA2 Dream Challenge</h3>
-      <p>Ranked 4th globally using RetinaNet + EfficientNet for radiographic scoring in rheumatoid arthritis.</p>
-    </div>
-    <div class="project">
-      <h3>🧠 MICCAI Brain Tumor Challenge</h3>
-      <p>CNN–LSTM + segmentation pipeline for tumor localization. Top 8%, Bronze medalist.</p>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">🔁 RTO Prediction @ GoKwik</h5>
+            <p class="card-text">XGBoost model served 2M+ real-time requests/day and reduced RTO by 40% (₹50M savings annually).</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">📈 pLTV Prediction System</h5>
+            <p class="card-text">Real-time gradient boosting system for customer event scoring (5M+ requests/day); 10–15% ROAS boost.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">🏥 RA2 Dream Challenge</h5>
+            <p class="card-text">Ranked 4th globally using RetinaNet + EfficientNet for radiographic scoring in rheumatoid arthritis.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">🧠 MICCAI Brain Tumor Challenge</h5>
+            <p class="card-text">CNN–LSTM + segmentation pipeline for tumor localization. Top 8%, Bronze medalist.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="experience">
+  <section id="experience" class="container">
     <h2>Experience Timeline</h2>
-    <div class="timeline-item">
-      <h3>Walmart Global Tech</h3>
-      <p><em>Senior Data Scientist (Jul 2022 – Present)</em><br>Vision + NLP model for HTS code classification. Productionized for Walmart Marketplace.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>GoKwik</h3>
-      <p><em>Applied Scientist 2 (Oct 2022 – Jul 2025)</em><br>Led ML initiatives (RTO, pLTV, Payment Preference); handled deployment, shadow testing, and team mentoring.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>Accern AI</h3>
-      <p><em>Senior Data Scientist (Jan 2022 – Sep 2022)</em><br>Active learning + BERT for taxonomy auto-labeling; cut costs by 40%.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>ZS Associates</h3>
-      <p><em>DS Associate Consultant (Jul 2019 – Dec 2021)</em><br>PU learning for rare disease detection, NASH modeling (published in Nature, Gastro), CV competition finalist.</p>
-    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <strong>Walmart Global Tech</strong><br>
+        <em>Senior Data Scientist (Jul 2022 – Present)</em><br>
+        Vision + NLP model for HTS code classification. Productionized for Walmart Marketplace.
+      </li>
+      <li class="list-group-item">
+        <strong>GoKwik</strong><br>
+        <em>Applied Scientist 2 (Oct 2022 – Jul 2025)</em><br>
+        Led ML initiatives (RTO, pLTV, Payment Preference); handled deployment, shadow testing, and team mentoring.
+      </li>
+      <li class="list-group-item">
+        <strong>Accern AI</strong><br>
+        <em>Senior Data Scientist (Jan 2022 – Sep 2022)</em><br>
+        Active learning + BERT for taxonomy auto-labeling; cut costs by 40%.
+      </li>
+      <li class="list-group-item">
+        <strong>ZS Associates</strong><br>
+        <em>DS Associate Consultant (Jul 2019 – Dec 2021)</em><br>
+        PU learning for rare disease detection, NASH modeling (published in Nature, Gastro), CV competition finalist.
+      </li>
+    </ul>
   </section>
 
-  <section id="resume">
+  <section id="resume" class="container text-center">
     <h2>Resume</h2>
     <p>View/download my latest resume here:</p>
-    <a href="Neelambuj_Resume_19July25.pdf" class="btn" target="_blank">📄 Download Resume</a>
+    <a href="Neelambuj_Resume_19July25.pdf" class="btn btn-primary" target="_blank">📄 Download Resume</a>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="container">
     <h2>Contact</h2>
     <p>📧 Email: <a href="mailto:Neelambuj.nitj@gmail.com">Neelambuj.nitj@gmail.com</a></p>
     <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/neelambuj-chaturvedi-981425103/" target="_blank">@neelambuj-chaturvedi</a></p>

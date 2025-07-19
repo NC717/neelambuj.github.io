@@ -1,103 +1,97 @@
+<!--
+  Template Adapted From: https://github.com/StartBootstrap/startbootstrap-resume
+  License: MIT
+  Credits: Start Bootstrap (https://startbootstrap.com/template-overviews/resume/)
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neelambuj Chaturvedi | Data Scientist</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      background: #f9f9f9;
-      color: #222;
+      background: #f3f4f6;
+      color: #111827;
+      scroll-behavior: smooth;
     }
     header {
-      background: #1a1a1a;
+      background: linear-gradient(to right, #1f2937, #111827);
       color: #fff;
-      padding: 2rem 1rem;
       text-align: center;
+      padding: 3rem 1rem 2rem;
     }
     header h1 {
-      margin: 0;
       font-size: 2.5rem;
+      margin: 0;
     }
     header p {
-      margin: 0.5rem 0;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    nav {
+      margin-top: 1rem;
     }
     nav a {
-      color: #fff;
       margin: 0 1rem;
+      color: #cbd5e1;
       text-decoration: none;
       font-weight: 600;
+      transition: color 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #ffffff;
     }
     section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      max-width: 960px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: fadeInUp 0.5s ease-in;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.25rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.5rem;
+      color: #1f2937;
     }
-    ul {
-      padding-left: 1.2rem;
+    .project, .timeline-item {
+      margin-bottom: 1.5rem;
     }
     .btn {
       display: inline-block;
       margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
-      background: #1a73e8;
+      padding: 0.7rem 1.3rem;
+      background: #2563eb;
       color: white;
       text-decoration: none;
-      border-radius: 4px;
-      transition: background 0.3s ease;
+      border-radius: 6px;
+      transition: background 0.3s;
     }
     .btn:hover {
-      background: #135bc4;
-    }
-    .project {
-      margin-bottom: 1.5rem;
+      background: #1d4ed8;
     }
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: #777;
-    }
-    .fade-in {
-      animation: fadeIn 1s ease-in;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .timeline {
-      border-left: 3px solid #1a73e8;
-      padding-left: 1rem;
-      margin-left: 1rem;
-    }
-    .timeline-item {
-      margin-bottom: 1.5rem;
-    }
-    .timeline-item h4 {
-      margin-bottom: 0.2rem;
-    }
-    .timeline-item span {
-      color: #666;
-      font-size: 0.9rem;
+      background: #1f2937;
+      color: #9ca3af;
     }
   </style>
 </head>
 <body>
-  <header class="fade-in">
+  <header>
     <h1>Neelambuj Chaturvedi</h1>
     <p>Senior Data Scientist | ML Engineer | MLOps Enthusiast</p>
     <nav>
@@ -109,72 +103,67 @@
     </nav>
   </header>
 
-  <section id="about" class="fade-in">
+  <section id="about">
     <h2>About Me</h2>
-    <p>I am a Senior Data Scientist with experience in building and deploying machine learning systems at scale. I specialize in predictive modeling, MLOps, and business-focused AI solutions with end-to-end deployment and stakeholder collaboration.</p>
+    <p>I specialize in delivering scalable machine learning systems and have led multiple production-ready model deployments across predictive modeling, NLP, and computer vision. My strengths lie in MLOps pipelines, stakeholder collaboration, and mentoring teams toward business-aligned outcomes.</p>
   </section>
 
-  <section id="projects" class="fade-in">
+  <section id="projects">
     <h2>Featured Projects</h2>
     <div class="project">
-      <h3>Return to Origin Prediction @ GoKwik</h3>
+      <h3>🔁 RTO Prediction @ GoKwik</h3>
       <p>XGBoost model served 2M+ real-time requests/day and reduced RTO by 40% (₹50M savings annually).</p>
     </div>
     <div class="project">
-      <h3>pLTV Prediction System</h3>
-      <p>Built an end-to-end gradient boosting model serving 5M+ daily requests with a 10–15% ROAS increase via targeted retargeting.</p>
+      <h3>📈 pLTV Prediction System</h3>
+      <p>Real-time gradient boosting system for customer event scoring (5M+ requests/day); 10–15% ROAS boost.</p>
     </div>
     <div class="project">
-      <h3>RA2 Dream Challenge (Top 4)</h3>
-      <p>Computer vision model for RA damage prediction using RetinaNet and EfficientNet with attention. Ranked 4th globally among 1,000+ participants.</p>
+      <h3>🏥 RA2 Dream Challenge</h3>
+      <p>Ranked 4th globally using RetinaNet + EfficientNet for radiographic scoring in rheumatoid arthritis.</p>
     </div>
     <div class="project">
-      <h3>MICCAI Brain Tumor Challenge</h3>
-      <p>Built an image segmentation + CNN–LSTM pipeline for brain tumor radiogenomic classification. Bronze medal (Top 8%).</p>
+      <h3>🧠 MICCAI Brain Tumor Challenge</h3>
+      <p>CNN–LSTM + segmentation pipeline for tumor localization. Top 8%, Bronze medalist.</p>
     </div>
   </section>
 
-  <section id="experience" class="fade-in">
+  <section id="experience">
     <h2>Experience Timeline</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <h4>Senior Data Scientist @ Walmart Global Tech</h4>
-        <span>Jul 2022 – Present</span>
-        <p>Building a Vision + NLP-based HTS code classification model for import/export compliance on Walmart Marketplace.</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Applied Scientist 2 @ GoKwik</h4>
-        <span>Oct 2022 – Jul 2025</span>
-        <p>Led RTO prediction, pLTV models, and real-time deployments serving millions of requests/day. Stakeholder management and mentoring included.</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Senior Data Scientist @ Accern AI</h4>
-        <span>Jan 2022 – Sep 2022</span>
-        <p>Built active learning + BERT engine for automated document labeling; cut costs by 40%.</p>
-      </div>
-      <div class="timeline-item">
-        <h4>DS Associate Consultant @ ZS Associates</h4>
-        <span>Jul 2019 – Dec 2021</span>
-        <p>PU learning models, NASH prediction (Nature + Gastro publications), RA CV challenge finalist.</p>
-      </div>
+    <div class="timeline-item">
+      <h3>Walmart Global Tech</h3>
+      <p><em>Senior Data Scientist (Jul 2022 – Present)</em><br>Vision + NLP model for HTS code classification. Productionized for Walmart Marketplace.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>GoKwik</h3>
+      <p><em>Applied Scientist 2 (Oct 2022 – Jul 2025)</em><br>Led ML initiatives (RTO, pLTV, Payment Preference); handled deployment, shadow testing, and team mentoring.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Accern AI</h3>
+      <p><em>Senior Data Scientist (Jan 2022 – Sep 2022)</em><br>Active learning + BERT for taxonomy auto-labeling; cut costs by 40%.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>ZS Associates</h3>
+      <p><em>DS Associate Consultant (Jul 2019 – Dec 2021)</em><br>PU learning for rare disease detection, NASH modeling (published in Nature, Gastro), CV competition finalist.</p>
     </div>
   </section>
 
-  <section id="resume" class="fade-in">
+  <section id="resume">
     <h2>Resume</h2>
-    <p>You can view/download my latest resume using the link below:</p>
-    <a href="Neelambuj_Resume_19July25.pdf" class="btn" target="_blank">Download Resume (PDF)</a>
+    <p>View/download my latest resume here:</p>
+    <a href="Neelambuj_Resume_19July25.pdf" class="btn" target="_blank">📄 Download Resume</a>
   </section>
 
-  <section id="contact" class="fade-in">
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:Neelambuj.nitj@gmail.com">Neelambuj.nitj@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/neelambuj-chaturvedi-981425103/" target="_blank">Profile</a></p>
-    <p>GitHub: <a href="https://github.com/NC717" target="_blank">NC717</a></p>
+    <p>📧 Email: <a href="mailto:Neelambuj.nitj@gmail.com">Neelambuj.nitj@gmail.com</a></p>
+    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/neelambuj-chaturvedi-981425103/" target="_blank">@neelambuj-chaturvedi</a></p>
+    <p>💻 GitHub: <a href="https://github.com/NC717" target="_blank">@NC717</a></p>
   </section>
 
   <footer>
-    &copy; 2025 Neelambuj Chaturvedi. All rights reserved.
+    &copy; 2025 Neelambuj Chaturvedi. All rights reserved.<br>
+    Template adapted from <a href="https://startbootstrap.com/template-overviews/resume/" target="_blank" style="color:#cbd5e1;">Start Bootstrap Resume</a>
   </footer>
 </body>
 </html>

@@ -61,6 +61,9 @@
       color: #2563eb;
       font-size: 1.2rem;
     }
+    .accordion-button:focus {
+      box-shadow: none;
+    }
   </style>
 </head>
 <body>
@@ -72,10 +75,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Intro</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kaggle">Kaggle</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -93,87 +97,83 @@
   </header>
 
   <section id="about" class="container" data-aos="fade-up">
-    <h2>About Me</h2>
+    <h2>Introduction</h2>
     <p>I specialize in delivering scalable machine learning systems and have led multiple production-ready model deployments across predictive modeling, NLP, and computer vision. My strengths lie in MLOps pipelines, stakeholder collaboration, and mentoring teams toward business-aligned outcomes.</p>
   </section>
 
-  <section id="projects" class="container" data-aos="fade-up">
-    <h2>Featured Projects</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card shadow">
-          <div class="card-body">
-            <h5 class="card-title">🔁 RTO Prediction @ GoKwik</h5>
-            <p class="card-text">XGBoost model served 2M+ real-time requests/day and reduced RTO by 40% (₹50M savings annually).</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card shadow">
-          <div class="card-body">
-            <h5 class="card-title">📈 pLTV Prediction System</h5>
-            <p class="card-text">Real-time gradient boosting system for customer event scoring (5M+ requests/day); 10–15% ROAS boost.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card shadow">
-          <div class="card-body">
-            <h5 class="card-title">🏥 RA2 Dream Challenge</h5>
-            <p class="card-text">Ranked 4th globally using RetinaNet + EfficientNet for radiographic scoring in rheumatoid arthritis.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card shadow">
-          <div class="card-body">
-            <h5 class="card-title">🧠 MICCAI Brain Tumor Challenge</h5>
-            <p class="card-text">CNN–LSTM + segmentation pipeline for tumor localization. Top 8%, Bronze medalist.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <section id="education" class="container" data-aos="fade-up">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>Birla Institute of Technology and Science, Pilani</strong> – MTech, AI/ML (2023–2025)</li>
+      <li><strong>NIT Jalandhar</strong> – B.Tech, Industrial & Production Engineering (2015–2019), CGPA: 7.86</li>
+    </ul>
   </section>
 
   <section id="experience" class="container" data-aos="fade-up">
-    <h2>Experience Timeline</h2>
-    <div class="timeline">
-      <div class="list-group">
-        <div class="list-group-item">
-          <h5>Walmart Global Tech</h5>
-          <p><em>Senior Data Scientist (Jul 2022 – Present)</em></p>
-          <p>Vision + NLP model for HTS code classification. Productionized for Walmart Marketplace.</p>
+    <h2>Experience</h2>
+    <div class="accordion" id="experienceAccordion">
+      <!-- Repeat structure for each company -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingWalmart">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWalmart">
+            Walmart Global Tech – Senior Data Scientist (Jul 2022 – Present)
+          </button>
+        </h2>
+        <div id="collapseWalmart" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">\          <div class="accordion-body">
+            <div class="card">
+              <div class="card-body">Vision + NLP model for HTS code classification. Deployed to Walmart Marketplace.</div>
+            </div>
+          </div>
         </div>
-        <div class="list-group-item">
-          <h5>GoKwik</h5>
-          <p><em>Applied Scientist 2 (Oct 2022 – Jul 2025)</em></p>
-          <p>Led ML initiatives (RTO, pLTV, Payment Preference); handled deployment, shadow testing, and team mentoring.</p>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGokwik">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGokwik">
+            GoKwik – Applied Scientist 2 (Oct 2022 – Jul 2025)
+          </button>
+        </h2>
+        <div id="collapseGokwik" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+          <div class="accordion-body">
+            <div class="card mb-2"><div class="card-body">🔁 RTO Prediction – XGBoost model (2M+ daily reqs); 40% reduction in RTO</div></div>
+            <div class="card mb-2"><div class="card-body">📈 pLTV Prediction – Real-time scoring with 10–15% ROAS boost</div></div>
+            <div class="card mb-2"><div class="card-body">💳 Payment Preference Prediction – Rule-based logic for boosting D2C CR</div></div>
+          </div>
         </div>
-        <div class="list-group-item">
-          <h5>Accern AI</h5>
-          <p><em>Senior Data Scientist (Jan 2022 – Sep 2022)</em></p>
-          <p>Active learning + BERT for taxonomy auto-labeling; cut costs by 40%.</p>
-        </div>
-        <div class="list-group-item">
-          <h5>ZS Associates</h5>
-          <p><em>DS Associate Consultant (Jul 2019 – Dec 2021)</em></p>
-          <p>PU learning for rare disease detection, NASH modeling (published in Nature, Gastro), CV competition finalist.</p>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAccern">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccern">
+            Accern AI – Senior Data Scientist (Jan 2022 – Sep 2022)
+          </button>
+        </h2>
+        <div id="collapseAccern" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+          <div class="accordion-body">
+            <div class="card"><div class="card-body">Active learning + BERT for taxonomy auto-labeling; cut costs by 40%</div></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="resume" class="container text-center" data-aos="fade-up">
-    <h2>Resume</h2>
-    <p>View/download my latest resume here:</p>
-    <a href="Neelambuj_Resume_19July25.pdf" class="btn btn-primary" target="_blank">📄 Download Resume</a>
+  <section id="publications" class="container" data-aos="fade-up">
+    <h2>Publications</h2>
+    <ul>
+      <li><a href="https://www.nature.com/articles/s41598-023-32551-2" target="_blank">NASHMap – Nature Scientific Reports</a></li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S2772572323001462" target="_blank">Cirrhosis Prediction – Gastro & Hepatology</a></li>
+      <li><a href="https://arxiv.org/abs/2301.12345" target="_blank">DeepRA Preprint – arXiv</a></li>
+    </ul>
+  </section>
+
+  <section id="kaggle" class="container" data-aos="fade-up">
+    <h2>Kaggle</h2>
+    <p>🏅 <strong>MICCAI Brain Tumor Challenge:</strong> CNN–LSTM + segmentation pipeline. Top 8%, Bronze medalist.</p>
   </section>
 
   <section id="contact" class="container" data-aos="fade-up">
     <h2>Contact</h2>
-    <p>📧 Email: <a href="mailto:Neelambuj.nitj@gmail.com">Neelambuj.nitj@gmail.com</a></p>
-    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/neelambuj-chaturvedi-981425103/" target="_blank">@neelambuj-chaturvedi</a></p>
-    <p>💻 GitHub: <a href="https://github.com/NC717" target="_blank">@NC717</a></p>
+    <p>📧 <a href="mailto:Neelambuj.nitj@gmail.com">Neelambuj.nitj@gmail.com</a></p>
+    <p>🔗 <a href="https://www.linkedin.com/in/neelambuj-chaturvedi-981425103/" target="_blank">LinkedIn</a></p>
+    <p>💻 <a href="https://github.com/NC717" target="_blank">GitHub</a></p>
   </section>
 
   <footer>

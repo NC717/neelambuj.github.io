@@ -9,10 +9,11 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f8fafc;
+      background-color: #f3f4f6;
       scroll-behavior: smooth;
     }
     .navbar {
@@ -24,19 +25,19 @@
     header {
       background: linear-gradient(to right, #1f2937, #111827);
       color: #fff;
-      padding: 3rem 1rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
     section {
-      padding: 2rem 1rem;
+      padding: 1.5rem 1rem;
     }
     h2 {
       border-bottom: 2px solid #e5e7eb;
       padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
     .card {
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
     .btn-primary {
       background-color: #2563eb;
@@ -49,12 +50,7 @@
       background-color: #1f2937;
       color: #9ca3af;
       text-align: center;
-      padding: 2rem 1rem;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      color: #2563eb;
-      font-size: 1.2rem;
+      padding: 1.5rem 1rem;
     }
     .accordion-button:focus {
       box-shadow: none;
@@ -71,76 +67,119 @@
   </style>
 </head>
 <body>
-  <!-- Same NAV and HEADER as before -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Neelambuj Chaturvedi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kaggle">Kaggle</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Neelambuj Chaturvedi</h1>
+    <p>Senior Data Scientist | MLOps | ML Systems | Stakeholder Collaboration</p>
+  </header>
+
+  <section id="education" class="container" data-aos="fade-up">
+    <h2>Education</h2>
+    <div class="card">
+      <div class="card-body">
+        <strong>Birla Institute of Technology and Science Pilani</strong><br>
+        MTech in Artificial Intelligence and Machine Learning (Apr 2023 – Apr 2025)
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <strong>National Institute of Technology, Jalandhar</strong><br>
+        B.Tech in Industrial and Production Engineering (2015 – 2019) | CGPA: 7.86/10
+      </div>
+    </div>
+  </section>
 
   <section id="experience" class="container" data-aos="fade-up">
     <h2>Experience</h2>
     <div class="accordion" id="experienceAccordion">
-      <!-- Walmart -->
       <div class="accordion-item">
-        <h2 class="accordion-header" id="headingWalmart">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWalmart">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#expWalmart">
             Walmart Global Tech – Senior Data Scientist (Jul 2022 – Present)
           </button>
         </h2>
-        <div id="collapseWalmart" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+        <div id="expWalmart" class="accordion-collapse collapse">
           <div class="accordion-body">
-            <div class="card"><div class="card-body">Vision + NLP model for HTS code classification. Deployed to Walmart Marketplace.</div></div>
+            <div class="card"><div class="card-body">HTS Classification using Vision + NLP model deployed on Walmart Marketplace</div></div>
           </div>
         </div>
       </div>
-
-      <!-- Gokwik -->
       <div class="accordion-item">
-        <h2 class="accordion-header" id="headingGokwik">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGokwik">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#expGokwik">
             GoKwik – Applied Scientist 2 (Oct 2022 – Jul 2025)
           </button>
         </h2>
-        <div id="collapseGokwik" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+        <div id="expGokwik" class="accordion-collapse collapse">
           <div class="accordion-body">
-            <div class="card mb-2"><div class="card-body">🔁 RTO Prediction – XGBoost model serving 2M+ daily reqs; reduced RTO by 40%</div></div>
-            <div class="card mb-2"><div class="card-body">📈 pLTV Prediction – Real-time scoring; 10–15% ROAS boost</div></div>
-            <div class="card mb-2"><div class="card-body">📊 Customer Profiling – Segmentation engine; 25% ROAS improvement in campaigns</div></div>
-            <div class="card mb-2"><div class="card-body">💳 Payment Preference Prediction – Rule-based logic; 2% increase in D2C conversion</div></div>
-            <div class="card mb-2"><div class="card-body">🛠️ Model Retraining Pipeline – Drift-based retraining; deployed via shadow validation</div></div>
+            <div class="card"><div class="card-body">RTO Prediction: 2M+ req/day, 40% RTO reduction</div></div>
+            <div class="card"><div class="card-body">pLTV Prediction: 10–15% ROAS lift with 5M+ daily scoring</div></div>
+            <div class="card"><div class="card-body">Customer Profiling: Segmentation boosted ROAS by 25%</div></div>
+            <div class="card"><div class="card-body">Payment Method Prediction: 2% CR lift</div></div>
+            <div class="card"><div class="card-body">Retraining Pipeline: Drift-based, shadow validated</div></div>
           </div>
         </div>
       </div>
-
-      <!-- Accern -->
       <div class="accordion-item">
-        <h2 class="accordion-header" id="headingAccern">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccern">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#expAccern">
             Accern AI – Senior Data Scientist (Jan 2022 – Sep 2022)
           </button>
         </h2>
-        <div id="collapseAccern" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+        <div id="expAccern" class="accordion-collapse collapse">
           <div class="accordion-body">
-            <div class="card mb-2"><div class="card-body">🔍 Active Learning – Automated taxonomy labeling using BERT + active learning; reduced annotation costs by 40%</div></div>
-            <div class="card mb-2"><div class="card-body">📄 Event Extraction – Trained QA-based models for financial news; enabled real-time alerts and classification</div></div>
-            <div class="card mb-2"><div class="card-body">🧪 Model Evaluation Suite – Built multi-metric scoring pipeline for benchmarking ML/NLP models pre-deployment</div></div>
+            <div class="card"><div class="card-body">BERT + Active Learning for taxonomy auto-labeling (40% cost reduction)</div></div>
           </div>
         </div>
       </div>
-
-      <!-- ZS Associates -->
       <div class="accordion-item">
-        <h2 class="accordion-header" id="headingZS">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZS">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#expZS">
             ZS Associates – DS Associate Consultant (Jul 2019 – Dec 2021)
           </button>
         </h2>
-        <div id="collapseZS" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+        <div id="expZS" class="accordion-collapse collapse">
           <div class="accordion-body">
-            <div class="card mb-2"><div class="card-body">🧬 Rare Disease Detection – PU learning with claims data; increased patient capture by 46%</div></div>
-            <div class="card mb-2"><div class="card-body">🧠 NASH & Cirrhosis Progression – ML models using EHR; published in Nature & Gastro journals</div></div>
-            <div class="card mb-2"><div class="card-body">📷 RA2 Challenge – CV pipeline with RetinaNet + EfficientNet; 4th/8th rank globally</div></div>
-            <div class="card mb-2"><div class="card-body">🎯 Targeting Strategy – Adaptive PU learning; improved therapy coverage by 10%</div></div>
+            <div class="card"><div class="card-body">PU Learning for rare disease detection (46% capture boost)</div></div>
+            <div class="card"><div class="card-body">NASH & Cirrhosis modeling published in Nature/Gastro</div></div>
+            <div class="card"><div class="card-body">RA2 CV Challenge: RetinaNet + EfficientNet (4th/8th rank)</div></div>
+            <div class="card"><div class="card-body">Adaptive PU learning strategy improved coverage by 10%</div></div>
           </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <section id="publications" class="container" data-aos="fade-up">
+    <h2>Publications</h2>
+    <ul>
+      <li><strong>Ranking and Clustering of Drosophila Olfactory Receptors</strong> – Mathematical morphology; published in Genomics, Elsevier</li>
+      <li><strong>DeepRA</strong> – RA progression using radiographs; arXiv preprint</li>
+      <li><strong>Crowdsourced RA Scoring Models</strong> – CV-based damage quantification; published in JAMA Network Open</li>
+    </ul>
+    <p><a href="https://scholar.google.com/citations?user=yw7vKUsAAAAJ" target="_blank">🔗 View on Google Scholar</a></p>
+  </section>
+
+  <section id="kaggle" class="container" data-aos="fade-up">
+    <h2>Kaggle</h2>
+    <p><strong>Brain Tumor Radiogenomic Classification:</strong> Top 8%, bronze medal. Used CNN + LSTM for segmentation and classification.</p>
   </section>
 
   <section id="contact" class="container" data-aos="fade-up">
@@ -148,23 +187,19 @@
     <div class="contact-box shadow">
       <div class="row">
         <div class="col-md-6 mb-3">
-          <i class="fas fa-envelope"></i> 
-          <strong>Email:</strong>
+          <i class="fas fa-envelope"></i> <strong>Email:</strong>
           <br><a href="mailto:Neelambuj.nitj@gmail.com">Neelambuj.nitj@gmail.com</a>
         </div>
         <div class="col-md-6 mb-3">
-          <i class="fab fa-linkedin"></i> 
-          <strong>LinkedIn:</strong>
+          <i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong>
           <br><a href="https://www.linkedin.com/in/neelambuj-chaturvedi-981425103/" target="_blank">linkedin.com/in/neelambuj-chaturvedi</a>
         </div>
         <div class="col-md-6 mb-3">
-          <i class="fab fa-github"></i> 
-          <strong>GitHub:</strong>
+          <i class="fab fa-github"></i> <strong>GitHub:</strong>
           <br><a href="https://github.com/NC717" target="_blank">github.com/NC717</a>
         </div>
         <div class="col-md-6 mb-3">
-          <i class="fas fa-phone"></i> 
-          <strong>Phone:</strong>
+          <i class="fas fa-phone"></i> <strong>Phone:</strong>
           <br>+91-9855672717
         </div>
       </div>

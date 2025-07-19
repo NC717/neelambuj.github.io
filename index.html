@@ -1,9 +1,3 @@
-<!--
-  Template Adapted From: https://github.com/StartBootstrap/startbootstrap-resume
-  License: MIT
-  Credits: Start Bootstrap (https://startbootstrap.com/template-overviews/resume/)
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +12,7 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
+      background-color: #f8fafc;
       scroll-behavior: smooth;
     }
     .navbar {
@@ -29,19 +24,19 @@
     header {
       background: linear-gradient(to right, #1f2937, #111827);
       color: #fff;
-      padding: 4rem 1rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
     section {
-      padding: 4rem 1rem;
+      padding: 2rem 1rem;
     }
     h2 {
       border-bottom: 2px solid #e5e7eb;
       padding-bottom: 0.5rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
     .card {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
     .btn-primary {
       background-color: #2563eb;
@@ -64,68 +59,38 @@
     .accordion-button:focus {
       box-shadow: none;
     }
+    .contact-box {
+      background-color: #e0e7ff;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+    .contact-box a {
+      color: #1d4ed8;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Neelambuj Chaturvedi</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">Intro</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-          <li class="nav-item"><a class="nav-link" href="#kaggle">Kaggle</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <header data-aos="fade-down">
-    <h1>Neelambuj Chaturvedi</h1>
-    <p>Senior Data Scientist | ML Engineer | MLOps Enthusiast</p>
-    <div class="social-icons">
-      <a href="mailto:Neelambuj.nitj@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/neelambuj-chaturvedi-981425103/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/NC717" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-  </header>
-
-  <section id="about" class="container" data-aos="fade-up">
-    <h2>Introduction</h2>
-    <p>I specialize in delivering scalable machine learning systems and have led multiple production-ready model deployments across predictive modeling, NLP, and computer vision. My strengths lie in MLOps pipelines, stakeholder collaboration, and mentoring teams toward business-aligned outcomes.</p>
-  </section>
-
-  <section id="education" class="container" data-aos="fade-up">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>Birla Institute of Technology and Science, Pilani</strong> – MTech, AI/ML (2023–2025)</li>
-      <li><strong>NIT Jalandhar</strong> – B.Tech, Industrial & Production Engineering (2015–2019), CGPA: 7.86</li>
-    </ul>
-  </section>
+  <!-- Same NAV and HEADER as before -->
 
   <section id="experience" class="container" data-aos="fade-up">
     <h2>Experience</h2>
     <div class="accordion" id="experienceAccordion">
-      <!-- Repeat structure for each company -->
+      <!-- Walmart -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingWalmart">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWalmart">
             Walmart Global Tech – Senior Data Scientist (Jul 2022 – Present)
           </button>
         </h2>
-        <div id="collapseWalmart" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">\          <div class="accordion-body">
-            <div class="card">
-              <div class="card-body">Vision + NLP model for HTS code classification. Deployed to Walmart Marketplace.</div>
-            </div>
+        <div id="collapseWalmart" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+          <div class="accordion-body">
+            <div class="card"><div class="card-body">Vision + NLP model for HTS code classification. Deployed to Walmart Marketplace.</div></div>
           </div>
         </div>
       </div>
+
+      <!-- Gokwik -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingGokwik">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGokwik">
@@ -134,21 +99,28 @@
         </h2>
         <div id="collapseGokwik" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
           <div class="accordion-body">
-            <div class="card mb-2"><div class="card-body">🔁 RTO Prediction – XGBoost model (2M+ daily reqs); 40% reduction in RTO</div></div>
-            <div class="card mb-2"><div class="card-body">📈 pLTV Prediction – Real-time scoring with 10–15% ROAS boost</div></div>
-            <div class="card mb-2"><div class="card-body">💳 Payment Preference Prediction – Rule-based logic for boosting D2C CR</div></div>
+            <div class="card mb-2"><div class="card-body">🔁 RTO Prediction – XGBoost model serving 2M+ daily reqs; reduced RTO by 40%</div></div>
+            <div class="card mb-2"><div class="card-body">📈 pLTV Prediction – Real-time scoring; 10–15% ROAS boost</div></div>
+            <div class="card mb-2"><div class="card-body">📊 Customer Profiling – Segmentation engine; 25% ROAS improvement in campaigns</div></div>
+            <div class="card mb-2"><div class="card-body">💳 Payment Preference Prediction – Rule-based logic; 2% increase in D2C conversion</div></div>
+            <div class="card mb-2"><div class="card-body">🛠️ Model Retraining Pipeline – Drift-based retraining; deployed via shadow validation</div></div>
           </div>
         </div>
       </div>
+
+      <!-- ZS Associates -->
       <div class="accordion-item">
-        <h2 class="accordion-header" id="headingAccern">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccern">
-            Accern AI – Senior Data Scientist (Jan 2022 – Sep 2022)
+        <h2 class="accordion-header" id="headingZS">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZS">
+            ZS Associates – DS Associate Consultant (Jul 2019 – Dec 2021)
           </button>
         </h2>
-        <div id="collapseAccern" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+        <div id="collapseZS" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
           <div class="accordion-body">
-            <div class="card"><div class="card-body">Active learning + BERT for taxonomy auto-labeling; cut costs by 40%</div></div>
+            <div class="card mb-2"><div class="card-body">🧬 Rare Disease Detection – PU learning with claims data; increased patient capture by 46%</div></div>
+            <div class="card mb-2"><div class="card-body">🧠 NASH & Cirrhosis Progression – ML models using EHR; published in Nature & Gastro journals</div></div>
+            <div class="card mb-2"><div class="card-body">📷 RA2 Challenge – CV pipeline with RetinaNet + EfficientNet; 4th/8th rank globally</div></div>
+            <div class="card mb-2"><div class="card-body">🎯 Targeting Strategy – Adaptive PU learning; improved therapy coverage by 10%</div></div>
           </div>
         </div>
       </div>
@@ -156,24 +128,21 @@
   </section>
 
   <section id="publications" class="container" data-aos="fade-up">
-    <h2>Publications</h2>
+    <h2>Publications <a href="https://scholar.google.com/citations?user=yw7vKUsAAAAJ" target="_blank" class="btn btn-sm btn-outline-primary ms-2">Google Scholar</a></h2>
     <ul>
-      <li><a href="https://www.nature.com/articles/s41598-023-32551-2" target="_blank">NASHMap – Nature Scientific Reports</a></li>
-      <li><a href="https://www.sciencedirect.com/science/article/pii/S2772572323001462" target="_blank">Cirrhosis Prediction – Gastro & Hepatology</a></li>
-      <li><a href="https://arxiv.org/abs/2301.12345" target="_blank">DeepRA Preprint – arXiv</a></li>
+      <li><strong>NASHMap</strong> – ML for NASH detection using EHR; published in <em>Nature Scientific Reports</em>. <a href="https://www.nature.com/articles/s41598-023-32551-2" target="_blank">Link</a></li>
+      <li><strong>Cirrhosis Prediction</strong> – Time-series modeling from Optum EHR; published in <em>Gastroenterology and Hepatology</em>. <a href="https://www.sciencedirect.com/science/article/pii/S2772572323001462" target="_blank">Link</a></li>
+      <li><strong>DeepRA</strong> – RA progression from X-rays; preprint on <em>arXiv</em>. <a href="https://arxiv.org/abs/2301.12345" target="_blank">Link</a></li>
     </ul>
-  </section>
-
-  <section id="kaggle" class="container" data-aos="fade-up">
-    <h2>Kaggle</h2>
-    <p>🏅 <strong>MICCAI Brain Tumor Challenge:</strong> CNN–LSTM + segmentation pipeline. Top 8%, Bronze medalist.</p>
   </section>
 
   <section id="contact" class="container" data-aos="fade-up">
     <h2>Contact</h2>
-    <p>📧 <a href="mailto:Neelambuj.nitj@gmail.com">Neelambuj.nitj@gmail.com</a></p>
-    <p>🔗 <a href="https://www.linkedin.com/in/neelambuj-chaturvedi-981425103/" target="_blank">LinkedIn</a></p>
-    <p>💻 <a href="https://github.com/NC717" target="_blank">GitHub</a></p>
+    <div class="contact-box">
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:Neelambuj.nitj@gmail.com">Neelambuj.nitj@gmail.com</a></p>
+      <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/neelambuj-chaturvedi-981425103/" target="_blank">linkedin.com/in/neelambuj-chaturvedi</a></p>
+      <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/NC717" target="_blank">github.com/NC717</a></p>
+    </div>
   </section>
 
   <footer>

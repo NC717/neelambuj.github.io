@@ -7,37 +7,37 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
-<body class="bg-dark text-light">
+<body class="bg-light text-dark">
 
-  <div class="container py-4">
+  <div class="container py-5">
 
     <!-- Header & Theme Toggle -->
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-flex justify-content-between align-items-center mb-5">
       <h1 class="mb-0">Neelambuj Chaturvedi</h1>
       <div>
-        <button class="btn btn-outline-light me-2" onclick="toggleTheme()">🌓 Theme</button>
+        <button class="btn btn-outline-dark me-2" onclick="toggleTheme()">🌓 Theme</button>
         <a href="resume/Neelambuj_Resume.pdf" class="btn btn-success" target="_blank">📄 Download Resume</a>
       </div>
     </div>
 
     <!-- Search Bar -->
-    <input type="text" id="searchInput" class="form-control mb-4" placeholder="Search projects, experience, publications..." onkeyup="filterContent()" />
+    <input type="text" id="searchInput" class="form-control mb-5" placeholder="Search projects, experience, publications..." onkeyup="filterContent()" />
 
     <!-- Introduction -->
-    <section id="intro">
+    <section id="intro" class="mb-5">
       <p>Senior Data Scientist with 6+ years of experience across e-commerce, healthcare, and finance. Passionate about ML systems, research, and mentoring.</p>
     </section>
 
-    <hr />
+    <hr class="my-5" />
 
     <!-- Experience (with Accordion) -->
-    <section id="experience">
+    <section id="experience" class="mb-5">
       <h2>Experience</h2>
       <div class="accordion" id="expAccordion">
         <!-- Each Company -->
-        <div class="accordion-item bg-secondary text-light filterable">
+        <div class="accordion-item bg-white text-dark filterable">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed bg-secondary text-light" data-bs-toggle="collapse" data-bs-target="#gokwik">GoKwik — Applied Scientist 2 (2022–2025)</button>
+            <button class="accordion-button collapsed bg-white text-dark" data-bs-toggle="collapse" data-bs-target="#gokwik">GoKwik — Applied Scientist 2 (2022–2025)</button>
           </h2>
           <div id="gokwik" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
             <div class="accordion-body">
@@ -49,9 +49,9 @@
           </div>
         </div>
 
-        <div class="accordion-item bg-secondary text-light filterable">
+        <div class="accordion-item bg-white text-dark filterable">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed bg-secondary text-light" data-bs-toggle="collapse" data-bs-target="#walmart">Walmart Global Tech — Sr. Data Scientist (2022–Present)</button>
+            <button class="accordion-button collapsed bg-white text-dark" data-bs-toggle="collapse" data-bs-target="#walmart">Walmart Global Tech — Sr. Data Scientist (2022–Present)</button>
           </h2>
           <div id="walmart" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
             <div class="accordion-body">
@@ -61,34 +61,75 @@
             </div>
           </div>
         </div>
-        <!-- Add more if needed -->
+
+        <div class="accordion-item bg-white text-dark filterable">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-white text-dark" data-bs-toggle="collapse" data-bs-target="#amazon">Amazon — Data Scientist (2020–2022)</button>
+          </h2>
+          <div id="amazon" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Developed recommendation systems for e-commerce platform.</li>
+                <li>Implemented A/B testing frameworks for product optimization.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item bg-white text-dark filterable">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-white text-dark" data-bs-toggle="collapse" data-bs-target="#microsoft">Microsoft — Data Scientist (2019–2020)</button>
+          </h2>
+          <div id="microsoft" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Worked on Azure ML services and cloud-based ML solutions.</li>
+                <li>Developed predictive models for customer behavior analysis.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item bg-white text-dark filterable">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-white text-dark" data-bs-toggle="collapse" data-bs-target="#google">Google — ML Engineer (2018–2019)</button>
+          </h2>
+          <div id="google" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Contributed to TensorFlow development and ML infrastructure.</li>
+                <li>Built scalable ML pipelines for large-scale data processing.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <hr />
+    <hr class="my-5" />
 
     <!-- Publications -->
-    <section id="publications">
+    <section id="publications" class="mb-5">
       <h2>Publications</h2>
       <ul>
-        <li class="filterable"><a class="link-light" href="https://www.sciencedirect.com/science/article/pii/S2772572323001462" target="_blank">Ranking and Clustering of Drosophila ORs — Elsevier</a></li>
-        <li class="filterable"><a class="link-light" href="https://www.synapse.org/Synapse:syn20545111/wiki/597246" target="_blank">RA2 Challenge — JAMA Network Open</a></li>
+        <li class="filterable"><a class="link-primary" href="https://www.sciencedirect.com/science/article/pii/S2772572323001462" target="_blank">Ranking and Clustering of Drosophila ORs — Elsevier</a></li>
+        <li class="filterable"><a class="link-primary" href="https://www.synapse.org/Synapse:syn20545111/wiki/597246" target="_blank">RA2 Challenge — JAMA Network Open</a></li>
         <li class="filterable"><a class="link-info" href="https://scholar.google.com/citations?user=yw7vKUsAAAAJ&hl=en" target="_blank">View on Google Scholar</a></li>
       </ul>
     </section>
 
-    <hr />
+    <hr class="my-5" />
 
     <!-- Kaggle Projects -->
-    <section id="kaggle">
+    <section id="kaggle" class="mb-5">
       <h2>Kaggle Projects</h2>
       <div class="row">
         <div class="col-md-6 mb-4 filterable">
-          <div class="card bg-secondary text-light h-100">
+          <div class="card bg-white text-dark h-100">
             <div class="card-body">
               <h5 class="card-title">MICCAI Brain Tumor Classification</h5>
               <p class="card-text">Bronze medal (Top 8%). CNN-LSTM with segmentation for radiogenomics.</p>
-              <a href="https://www.kaggle.com/neelambuj717" target="_blank" class="btn btn-light">View Project</a>
+              <a href="https://www.kaggle.com/neelambuj717" target="_blank" class="btn btn-primary">View Project</a>
             </div>
           </div>
         </div>
@@ -96,10 +137,10 @@
       </div>
     </section>
 
-    <hr />
+    <hr class="my-5" />
 
     <!-- Education -->
-    <section id="education">
+    <section id="education" class="mb-5">
       <h2>Education</h2>
       <ul>
         <li class="filterable"><strong>M.Tech, AI & ML</strong> — BITS Pilani (WILP), 2023–2025</li>
@@ -107,10 +148,10 @@
       </ul>
     </section>
 
-    <hr />
+    <hr class="my-5" />
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="mb-5">
       <h2>Contact</h2>
       <ul>
         <li>Email: <a class="link-info" href="mailto:Neelambuj.nitj@gmail.com">Neelambuj.nitj@gmail.com</a></li>

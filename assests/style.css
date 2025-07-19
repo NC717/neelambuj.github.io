@@ -1,0 +1,24 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #1e1e1e, #2e2e2e);
+}
+
+h1, h2 {
+  color: #fff;
+}
+
+.card {
+  border: none;
+  border-radius: 1rem;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #444;
+}
+
+a.link-info, a.link-light {
+  text-decoration: none;
+}
+a.link-info:hover, a.link-light:hover {
+  text-decoration: underline;
+}

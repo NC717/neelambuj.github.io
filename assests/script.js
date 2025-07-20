@@ -1,31 +1,5 @@
-// Theme toggle
-function toggleTheme() {
-  const body = document.body;
-  const themeButton = document.querySelector('button[onclick="toggleTheme()"]');
-  
-  if (body.classList.contains('bg-light')) {
-    // Switch to dark theme
-    body.classList.remove('bg-light', 'text-dark');
-    body.classList.add('bg-dark', 'text-light');
-    themeButton.classList.remove('btn-outline-dark');
-    themeButton.classList.add('btn-outline-light');
-  } else {
-    // Switch to light theme
-    body.classList.remove('bg-dark', 'text-light');
-    body.classList.add('bg-light', 'text-dark');
-    themeButton.classList.remove('btn-outline-light');
-    themeButton.classList.add('btn-outline-dark');
-  }
-}
-
-// Initialize theme on page load
+// Initialize page on load
 document.addEventListener('DOMContentLoaded', function() {
-  // Set initial theme to light
-  const body = document.body;
-  const themeButton = document.querySelector('button[onclick="toggleTheme()"]');
-  
-  if (!body.classList.contains('bg-dark') && !body.classList.contains('bg-light')) {
-    body.classList.add('bg-light', 'text-dark');
-    themeButton.classList.add('btn-outline-dark');
-  }
+  // Any initialization code can go here
+  console.log('Portfolio page loaded successfully!');
 });

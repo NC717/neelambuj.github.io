@@ -8,12 +8,14 @@ body.bg-dark {
   background: linear-gradient(to right, #1e1e1e, #2e2e2e);
 }
 
-/* Hero Section Styling */
+/* Hero Section Styling - More Specific */
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
   position: relative;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-section::before {
@@ -33,12 +35,12 @@ body.bg-dark {
 }
 
 .hero-section h1 {
-  color: white;
+  color: white !important;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-section p {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9) !important;
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -57,7 +59,7 @@ body.bg-dark {
 
 /* Dark theme hero section */
 body.bg-dark .hero-section {
-  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%) !important;
 }
 
 body.bg-dark .hero-section::before {

@@ -18,20 +18,6 @@ function toggleTheme() {
   }
 }
 
-// Live filter
-function filterContent() {
-  const input = document.getElementById("searchInput").value.toLowerCase();
-  const items = document.querySelectorAll(".filterable");
-
-  items.forEach((item) => {
-    if (item.innerText.toLowerCase().includes(input)) {
-      item.style.display = "";
-    } else {
-      item.style.display = "none";
-    }
-  });
-}
-
 // Initialize theme on page load
 document.addEventListener('DOMContentLoaded', function() {
   // Set initial theme to light

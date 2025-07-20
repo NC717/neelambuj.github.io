@@ -29,9 +29,31 @@ body.bg-dark h1, body.bg-dark h2 {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Bigger Experience Accordion Tiles */
+.accordion-item {
+  border: 1px solid #dee2e6;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.accordion-button {
+  padding: 1.5rem 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 0.75rem;
+}
+
 .accordion-button:not(.collapsed) {
   background-color: #e9ecef;
   color: #212529;
+  box-shadow: none;
 }
 
 body.bg-dark .accordion-button:not(.collapsed) {
@@ -39,14 +61,42 @@ body.bg-dark .accordion-button:not(.collapsed) {
   color: #fff;
 }
 
-.accordion-item {
-  border: 1px solid #dee2e6;
-  margin-bottom: 0.5rem;
-  border-radius: 0.5rem;
+.accordion-body {
+  padding: 1.5rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 body.bg-dark .accordion-item {
   border-color: #495057;
+}
+
+/* Publication List Styling */
+.publication-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.publication-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.publication-list li:last-child {
+  border-bottom: none;
+}
+
+.publication-list a {
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+body.bg-dark .publication-list li {
+  border-bottom-color: #495057;
 }
 
 a.link-info, a.link-light, a.link-primary {
@@ -68,6 +118,11 @@ a.link-info:hover, a.link-light:hover, a.link-primary:hover {
   transform: translateY(-1px);
 }
 
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+}
+
 .form-control {
   border-radius: 0.5rem;
   border: 2px solid #dee2e6;
@@ -87,4 +142,33 @@ section {
 hr {
   border-width: 2px;
   opacity: 0.3;
+}
+
+/* Contact section styling */
+#contact .card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 2px solid #dee2e6;
+}
+
+body.bg-dark #contact .card {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  border-color: #495057;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .publication-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .accordion-button {
+    padding: 1.25rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .accordion-body {
+    padding: 1.25rem 1rem;
+  }
 }

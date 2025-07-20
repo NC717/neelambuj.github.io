@@ -1,7 +1,8 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to right, #f8f9fa, #e9ecef);
   transition: all 0.3s ease;
+  line-height: 1.6;
 }
 
 /* Hero Section Styling - More Specific */
@@ -14,6 +15,179 @@ body {
   padding: 0;
 }
 
+/* Animated Particle Background */
+.particle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  animation: float-particle 15s linear infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.particle-1 {
+  width: 8px;
+  height: 8px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 20s;
+}
+
+.particle-2 {
+  width: 12px;
+  height: 12px;
+  top: 60%;
+  left: 20%;
+  animation-delay: 2s;
+  animation-duration: 18s;
+}
+
+.particle-3 {
+  width: 6px;
+  height: 6px;
+  top: 40%;
+  left: 80%;
+  animation-delay: 4s;
+  animation-duration: 22s;
+}
+
+.particle-4 {
+  width: 10px;
+  height: 10px;
+  top: 80%;
+  left: 70%;
+  animation-delay: 6s;
+  animation-duration: 16s;
+}
+
+.particle-5 {
+  width: 8px;
+  height: 8px;
+  top: 30%;
+  left: 50%;
+  animation-delay: 8s;
+  animation-duration: 19s;
+}
+
+.particle-6 {
+  width: 14px;
+  height: 14px;
+  top: 70%;
+  left: 30%;
+  animation-delay: 10s;
+  animation-duration: 17s;
+}
+
+.particle-7 {
+  width: 6px;
+  height: 6px;
+  top: 10%;
+  left: 90%;
+  animation-delay: 12s;
+  animation-duration: 21s;
+}
+
+.particle-8 {
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 15%;
+  animation-delay: 14s;
+  animation-duration: 18s;
+}
+
+.particle-9 {
+  width: 8px;
+  height: 8px;
+  top: 90%;
+  left: 60%;
+  animation-delay: 16s;
+  animation-duration: 20s;
+}
+
+.particle-10 {
+  width: 12px;
+  height: 12px;
+  top: 25%;
+  left: 75%;
+  animation-delay: 18s;
+  animation-duration: 19s;
+}
+
+.particle-11 {
+  width: 6px;
+  height: 6px;
+  top: 75%;
+  left: 85%;
+  animation-delay: 20s;
+  animation-duration: 22s;
+}
+
+.particle-12 {
+  width: 10px;
+  height: 10px;
+  top: 15%;
+  left: 40%;
+  animation-delay: 22s;
+  animation-duration: 17s;
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(100vh) translateX(0) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(90vh) translateX(10px) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(10vh) translateX(-10px) scale(1);
+  }
+  100% {
+    transform: translateY(-10vh) translateX(0) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Add some connecting lines between particles */
+.particle-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  animation: pulse-glow 8s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
 .hero-section::before {
   content: '';
   position: absolute;
@@ -21,18 +195,20 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.05"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.05"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.05"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
   pointer-events: none;
+  z-index: 0;
 }
 
 .hero-section .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-section h1 {
   color: white !important;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
 }
 
 .hero-section p {
@@ -53,9 +229,115 @@ body {
   transform: translateY(-2px);
 }
 
+/* Enhanced Resume Button */
+.btn-resume {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  color: #1e3c72 !important;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-resume::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.btn-resume:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+}
+
+.btn-resume:hover::before {
+  left: 100%;
+}
+
+.btn-resume .badge {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
+/* Enhanced Introduction */
+.intro-content {
+  position: relative;
+  z-index: 2;
+}
+
+.intro-main {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Achievements Grid */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.achievement-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-item i {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.achievement-item span {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Typography Consistency */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
 h1, h2 {
   color: #212529;
-  font-weight: 600;
+}
+
+p, li, .card-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #495057;
 }
 
 .card {
@@ -70,10 +352,10 @@ h1, h2 {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Bigger Experience Accordion Tiles */
+/* Enhanced Experience Accordion Tiles */
 .accordion-item {
   border: 1px solid #dee2e6;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   border-radius: 0.75rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
@@ -85,10 +367,11 @@ h1, h2 {
 }
 
 .accordion-button {
-  padding: 1.5rem 1.25rem;
-  font-size: 1.1rem;
+  padding: 1.25rem 1rem;
+  font-size: 1rem;
   font-weight: 500;
   border-radius: 0.75rem;
+  transition: all 0.3s ease;
 }
 
 .accordion-button:not(.collapsed) {
@@ -97,10 +380,74 @@ h1, h2 {
   box-shadow: none;
 }
 
+.accordion-button:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-1px);
+}
+
+.accordion-body {
+  padding: 1.25rem 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Achievement List Styling */
+.achievement-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.achievement-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #f8f9fa;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.achievement-list li:last-child {
+  border-bottom: none;
+}
+
+.achievement-list li i {
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+}
+
+.achievement-list li strong {
+  color: #212529;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.achievement-list .badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 0.375rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Enhanced Accordion Body */
 .accordion-body {
   padding: 1.5rem 1.25rem;
   font-size: 1rem;
   line-height: 1.6;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Better text wrapping and alignment */
+.achievement-list li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 /* Publication List Styling */
@@ -164,12 +511,13 @@ a.link-info:hover, a.link-light:hover, a.link-primary:hover {
 
 /* Improved spacing */
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 hr {
   border-width: 2px;
   opacity: 0.3;
+  margin: 2rem 0;
 }
 
 /* Contact section styling */
@@ -178,8 +526,142 @@ hr {
   border: 2px solid #dee2e6;
 }
 
+/* Publication Card Styling */
+.publication-card {
+  border: 1px solid #e9ecef;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.publication-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #dee2e6;
+}
+
+.publication-card .card-body {
+  padding: 1.5rem;
+}
+
+.publication-card h6 {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+/* Education Card Styling */
+.education-card {
+  border: 1px solid #e9ecef;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.education-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #dee2e6;
+}
+
+.education-card .card-body {
+  padding: 1.5rem;
+}
+
+/* Contact Section Styling */
+.contact-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 2px solid #dee2e6;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.contact-item h6 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+  margin-bottom: 1rem;
+}
+
+/* Badge Styling */
+.badge {
+  font-weight: 500;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.bg-outline-primary {
+  background-color: transparent;
+  color: #0d6efd;
+  border: 1px solid #0d6efd;
+}
+
+.bg-outline-success {
+  background-color: transparent;
+  color: #198754;
+  border: 1px solid #198754;
+}
+
+.bg-outline-info {
+  background-color: transparent;
+  color: #0dcaf0;
+  border: 1px solid #0dcaf0;
+}
+
+/* Section Headers */
+section h2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+section h2 i {
+  margin-right: 0.75rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .geometric-shape {
+    display: none;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .achievement-item {
+    padding: 0.75rem;
+  }
+  
+  .intro-main {
+    font-size: 1.1rem;
+  }
+  
+  .btn-resume {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
   .publication-list li {
     flex-direction: column;
     align-items: flex-start;
@@ -187,15 +669,290 @@ hr {
   }
   
   .accordion-button {
-    padding: 1.25rem 1rem;
-    font-size: 1rem;
+    padding: 1rem 0.75rem;
+    font-size: 0.9rem;
   }
   
   .accordion-body {
-    padding: 1.25rem 1rem;
+    padding: 1rem 0.75rem;
   }
   
   .hero-section p {
     font-size: 1rem;
+  }
+  
+  .achievement-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .achievement-list .badge {
+    margin-left: 0;
+    margin-top: 0.25rem;
+  }
+  
+  .publication-card,
+  .education-card {
+    margin-bottom: 1rem;
+  }
+  
+  .contact-item {
+    margin-bottom: 1rem;
+  }
+  
+  .contact-card .card-body {
+    padding: 2rem 1rem;
+  }
+  
+  .row.g-4 {
+    --bs-gutter-y: 1rem;
+  }
+  
+  section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Section Backgrounds with Animated Effects */
+.section-bg {
+  position: relative;
+  padding: 2rem 0;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.section-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.05;
+  animation: section-pulse 8s ease-in-out infinite;
+}
+
+/* Experience Section Background */
+.experience-bg::before {
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(13, 110, 253, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(25, 135, 84, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(13, 110, 253, 0.05) 0%, rgba(25, 135, 84, 0.05) 100%);
+}
+
+/* Publications Section Background */
+.publications-bg::before {
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(220, 53, 69, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(220, 53, 69, 0.05) 0%, rgba(255, 193, 7, 0.05) 100%);
+}
+
+/* Kaggle Section Background */
+.kaggle-bg::before {
+  background: 
+    radial-gradient(circle at 25% 35%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 65%, rgba(13, 202, 240, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(255, 193, 7, 0.05) 0%, rgba(13, 202, 240, 0.05) 100%);
+}
+
+/* Education Section Background */
+.education-bg::before {
+  background: 
+    radial-gradient(circle at 40% 25%, rgba(13, 202, 240, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 60% 75%, rgba(108, 117, 125, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(13, 202, 240, 0.05) 0%, rgba(108, 117, 125, 0.05) 100%);
+}
+
+/* Contact Section Background */
+.contact-bg::before {
+  background: 
+    radial-gradient(circle at 35% 45%, rgba(25, 135, 84, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 65% 55%, rgba(13, 110, 253, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(25, 135, 84, 0.05) 0%, rgba(13, 110, 253, 0.05) 100%);
+}
+
+@keyframes section-pulse {
+  0%, 100% {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.08;
+    transform: scale(1.02);
+  }
+}
+
+/* Floating Elements for Sections */
+.section-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px, 40px 40px;
+  animation: float-dots 20s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes float-dots {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+/* Enhanced Card Styling for Sections */
+.section-bg .card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.section-bg .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+/* Section Header Enhancements */
+.section-bg h2 {
+  position: relative;
+  z-index: 1;
+}
+
+.section-bg h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--bs-primary), var(--bs-info));
+  border-radius: 2px;
+  animation: header-glow 3s ease-in-out infinite;
+}
+
+@keyframes header-glow {
+  0%, 100% {
+    opacity: 0.7;
+    width: 60px;
+  }
+  50% {
+    opacity: 1;
+    width: 80px;
+  }
+}
+
+/* New Experience Item Structure */
+.experience-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--bs-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+.experience-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.experience-header i {
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.experience-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0;
+  flex-grow: 1;
+  line-height: 1.3;
+}
+
+.achievement-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.achievement-badges .badge {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.experience-description {
+  color: #495057;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .experience-item {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .experience-header {
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .experience-header i {
+    font-size: 1.25rem;
+  }
+  
+  .experience-title {
+    font-size: 1rem;
+  }
+  
+  .achievement-badges {
+    margin-top: 0.25rem;
+  }
+  
+  .achievement-badges .badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .experience-description {
+    font-size: 0.95rem;
   }
 }

@@ -6,12 +6,28 @@
   <title>Neelambuj Chaturvedi | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assests/style.css" />
 </head>
 <body class="bg-light text-dark">
 
   <!-- Hero Section with Different Background -->
   <div class="hero-section" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white;">
+    <!-- Animated Particle Background -->
+    <div class="particle-bg">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
+      <div class="particle particle-5"></div>
+      <div class="particle particle-6"></div>
+      <div class="particle particle-7"></div>
+      <div class="particle particle-8"></div>
+      <div class="particle particle-9"></div>
+      <div class="particle particle-10"></div>
+      <div class="particle particle-11"></div>
+      <div class="particle particle-12"></div>
+    </div>
+    
     <div class="container py-5">
       <!-- Header -->
       <div class="d-flex justify-content-between align-items-center mb-5">
@@ -31,13 +47,42 @@
           </div>
         </div>
         <div>
-          <a href="resume/Neelambuj_Resume.pdf" class="btn btn-light" target="_blank">📄 Download Resume</a>
+          <a href="resume/Neelambuj_Resume.pdf" class="btn btn-resume" target="_blank">
+            <i class="bi bi-download me-2"></i>Download Resume
+            <span class="badge bg-light text-dark ms-2">PDF</span>
+          </a>
         </div>
       </div>
 
-      <!-- Introduction -->
+      <!-- Enhanced Introduction -->
       <section id="intro" class="mb-5">
-        <p style="color: rgba(255, 255, 255, 0.95);">Senior Data Scientist with 6+ years of experience across e-commerce, healthcare, and finance. Passionate about ML systems, research, and mentoring.</p>
+        <div class="intro-content">
+          <p class="intro-main" style="color: rgba(255, 255, 255, 0.95);">
+            Senior Data Scientist with 6+ years of experience transforming business outcomes through ML innovation. 
+            Led teams delivering ₹50M+ in annual savings, serving 5M+ daily predictions across e-commerce & healthcare. 
+            Passionate about building scalable ML systems, advancing research, and mentoring the next generation of data scientists.
+          </p>
+          
+          <!-- Key Achievements -->
+          <div class="achievements-grid mt-4">
+            <div class="achievement-item">
+              <i class="bi bi-graph-up text-warning"></i>
+              <span>₹50M+ Annual Savings</span>
+            </div>
+            <div class="achievement-item">
+              <i class="bi bi-lightning text-info"></i>
+              <span>5M+ Daily Predictions</span>
+            </div>
+            <div class="achievement-item">
+              <i class="bi bi-trophy text-success"></i>
+              <span>4th Place RA2 Challenge</span>
+            </div>
+            <div class="achievement-item">
+              <i class="bi bi-journal-text text-primary"></i>
+              <span>3+ Research Papers</span>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </div>
@@ -47,169 +92,465 @@
     <hr class="my-5" />
 
     <!-- Experience (with Accordion) -->
-    <section id="experience" class="mb-5">
-      <h2>Experience</h2>
-      <div class="accordion" id="expAccordion">
-        <!-- Each Company -->
-        <div class="accordion-item bg-white text-dark filterable">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed bg-white text-dark" data-bs-toggle="collapse" data-bs-target="#gokwik">GoKwik — Applied Scientist 2 (2022–2025)</button>
-          </h2>
-          <div id="gokwik" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
-            <div class="accordion-body">
-              <ul>
-                <li><strong>RTO Model:</strong> Saved ₹50M/year using XGBoost-based prediction system.</li>
-                <li><strong>pLTV:</strong> 10–15% ROAS uplift using real-time LTV model.</li>
-              </ul>
+    <div class="section-bg experience-bg">
+      <section id="experience" class="mb-4">
+        <h2><i class="bi bi-briefcase me-2 text-primary"></i>Experience</h2>
+        <div class="accordion" id="expAccordion">
+          <!-- Each Company -->
+
+          <div class="accordion-item bg-white text-dark filterable">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-white text-dark" data-bs-toggle="collapse" data-bs-target="#walmart">
+                <div class="d-flex align-items-center w-100">
+                  <i class="bi bi-building me-3 fs-4 text-primary"></i>
+                  <div class="text-start">
+                    <div class="fw-bold">Walmart Global Tech</div>
+                    <div class="text-muted small">Senior Data Scientist | July 2025 - Present</div>
+                    <div class="text-info small">🎯 ML & Computer Vision</div>
+                  </div>
+                </div>
+              </button>
+            </h2>
+            <div id="walmart" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
+              <div class="accordion-body">
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <i class="bi bi-eye text-primary"></i>
+                    <h6 class="experience-title">Cross Border HTS Classification</h6>
+                  </div>
+                  <p class="experience-description">
+                    Working on a Vision + NLP based model to classify HTS codes for various products being imported and exported, currently deployed on Walmart Marketplace.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item bg-white text-dark filterable">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-white text-dark" data-bs-toggle="collapse" data-bs-target="#amazon">
+                <div class="d-flex align-items-center w-100">
+                  <i class="bi bi-lightning-charge me-3 fs-4 text-warning"></i>
+                  <div class="text-start">
+                    <div class="fw-bold">Gokwik</div>
+                    <div class="text-muted small">Applied Scientist 2 | Oct 2022 – July 2025</div>
+                    <div class="text-info small">🚀 E-commerce ML & Real-time Systems</div>
+                  </div>
+                </div>
+              </button>
+            </h2>
+            <div id="amazon" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
+              <div class="accordion-body">
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <i class="bi bi-graph-down text-success"></i>
+                    <h6 class="experience-title">Return to Origin (RTO) Model</h6>
+                    <div class="achievement-badges">
+                      <span class="badge bg-success text-white">💰 Saved ₹50M annually</span>
+                      <span class="badge bg-primary text-white">📉 Reduced RTO by 40%</span>
+                    </div>
+                  </div>
+                  <p class="experience-description">
+                    Built and deployed three end-to-end versions of GoKwik's flagship XGBoost-based RTO prediction model on the GoKwik Checkout, serving over 2 million real-time requests/day using both batch and streaming features via an in-house Feature Store.
+                  </p>
+                </div>
+
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <i class="bi bi-arrow-repeat text-info"></i>
+                    <h6 class="experience-title">Model Retraining and Monitoring Pipeline</h6>
+                  </div>
+                  <p class="experience-description">
+                    Designed an end-to-end pipeline to monitor feature distribution drift and trigger retraining. The updated model is deployed in shadow mode for validation before production rollout.
+                  </p>
+                </div>
+
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <i class="bi bi-cash-stack text-warning"></i>
+                    <h6 class="experience-title">pLTV Prediction</h6>
+                    <div class="achievement-badges">
+                      <span class="badge bg-info text-white">📊 Serving 5M+ daily requests</span>
+                      <span class="badge bg-success text-white">📈 10-15% ROAS increase</span>
+                    </div>
+                  </div>
+                  <p class="experience-description">
+                    Developed an end-to-end system to predict the pLTV value of a customer event in real time using gradient boosting models on session-level and batch features.
+                  </p>
+                </div>
+
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <i class="bi bi-people text-primary"></i>
+                    <h6 class="experience-title">Customer Profiling (KwikAudiences)</h6>
+                    <div class="achievement-badges">
+                      <span class="badge bg-success text-white">📈 25% ROAS improvement</span>
+                    </div>
+                  </div>
+                  <p class="experience-description">
+                    Built an intelligent system to segment GoKwik customers based on cross-brand buying behavior. Led POCs with D2C merchants to run marketing campaigns using these segments.
+                  </p>
+                </div>
+
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <i class="bi bi-credit-card text-secondary"></i>
+                    <h6 class="experience-title">Payment Method Prediction</h6>
+                    <div class="achievement-badges">
+                      <span class="badge bg-success text-white">📈 2% increase in conversion rate</span>
+                    </div>
+                  </div>
+                  <p class="experience-description">
+                    Developed an intelligent, rule-based approach to predict the preferred payment method for a user on the GoKwik checkout page. A/B testing showed improved conversion rates for D2C merchants.
+                  </p>
+                </div>
+
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <i class="bi bi-person-gear text-dark"></i>
+                    <h6 class="experience-title">Stakeholder Management & Leadership</h6>
+                  </div>
+                  <p class="experience-description">
+                    Collaborated with product and tech teams to ensure timely delivery of data science models. Defined phase-wise timelines to improve transparency during development. Led a team of 2 Applied Scientists (AS1s), delivering impact through enhancements to the RTO and pLTV models.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item bg-white text-dark filterable">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-white text-dark" data-bs-toggle="collapse" data-bs-target="#microsoft">
+                <div class="d-flex align-items-center w-100">
+                  <i class="bi bi-robot me-3 fs-4 text-info"></i>
+                  <div class="text-start">
+                    <div class="fw-bold">Accern</div>
+                    <div class="text-muted small">Data Scientist | Jan 2022 - Sep 2022</div>
+                    <div class="text-info small">🤖 No-Code AI & Finance</div>
+                  </div>
+                </div>
+              </button>
+            </h2>
+            <div id="microsoft" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
+              <div class="accordion-body">
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <i class="bi bi-tags text-primary"></i>
+                    <h6 class="experience-title">Dynamic Taxonomy Labeller</h6>
+                    <div class="achievement-badges">
+                      <span class="badge bg-success text-white">💰 Reduced labeling costs by 40%</span>
+                    </div>
+                  </div>
+                  <p class="experience-description">
+                    Developed an active learning engine (BADGE and uncertainty estimation) combined with BERT to automate taxonomy labeling of internal documents. Enabled faster training of in-house sentiment models.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item bg-white text-dark filterable">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-white text-dark" data-bs-toggle="collapse" data-bs-target="#google">
+                <div class="d-flex align-items-center w-100">
+                  <i class="bi bi-heart-pulse me-3 fs-4 text-danger"></i>
+                  <div class="text-start">
+                    <div class="fw-bold">ZS Associates, Advanced Data Science Group</div>
+                    <div class="text-muted small">Data Science Associate Consultant | July 2019 - Dec 2021</div>
+                    <div class="text-info small">🏥 Healthcare ML & Research</div>
+                  </div>
+                </div>
+              </button>
+            </h2>
+            <div id="google" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
+              <div class="accordion-body">
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <i class="bi bi-search text-primary"></i>
+                    <h6 class="experience-title">Rare Disease Patient Identification</h6>
+                    <div class="achievement-badges">
+                      <span class="badge bg-success text-white">📈 Increased patient capture by 46%</span>
+                    </div>
+                  </div>
+                  <p class="experience-description">
+                    Built a gradient boosting model using Positive-Unlabeled (PU) learning to identify patients with rare diseases via healthcare claims. Devised go-to-market (GTM) strategy for reps using prescribing patterns in the US Southeast region.
+                  </p>
+                </div>
+
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <i class="bi bi-graph-up text-warning"></i>
+                    <h6 class="experience-title">NASH Patient Identification and Progression</h6>
+                  </div>
+                  <p class="experience-description">
+                    Developed ML models to detect NASH patients using EHR and NIDDK datasets. Published findings in Nature Scientific Reports (NASHMap). Built a progression model to predict cirrhosis using Optum EHR data, published in Gastroenterology and Hepatology.
+                  </p>
+                </div>
+
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <i class="bi bi-trophy text-warning"></i>
+                    <h6 class="experience-title">RA2 Dream Challenge</h6>
+                    <div class="achievement-badges">
+                      <span class="badge bg-warning text-dark">🏆 Secured 4th and 8th place</span>
+                    </div>
+                  </div>
+                  <p class="experience-description">
+                    Represented ZS in a computer vision challenge predicting erosion and narrowing scores for rheumatoid arthritis patients from X-rays. Built a multi-stage pipeline using RetinaNet for joint detection and EfficientNet + attention for scoring among 1,000+ participants, presented at RSG Dream Conference.
+                  </p>
+                </div>
+
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <i class="bi bi-target text-info"></i>
+                    <h6 class="experience-title">Unaddressed Opportunities</h6>
+                    <div class="achievement-badges">
+                      <span class="badge bg-success text-white">📈 Increasing coverage by 10%</span>
+                    </div>
+                  </div>
+                  <p class="experience-description">
+                    Built a multi-stage adaptive PU learning system to enrich claims data. Created targeting strategies for breast cancer therapies based on model scores.
+                  </p>
+                </div>
+
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <i class="bi bi-award text-success"></i>
+                    <h6 class="experience-title">Achievements & Leadership</h6>
+                  </div>
+                  <p class="experience-description">
+                    Got a fast track promotion within 1.5 years to DSAC. Mentored 3 DSAs to formulate, design, and deploy ML solutions while deepening domain expertise.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
+    </div>
 
-        <div class="accordion-item bg-white text-dark filterable">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed bg-white text-dark" data-bs-toggle="collapse" data-bs-target="#walmart">Walmart Global Tech — Sr. Data Scientist (2022–Present)</button>
-          </h2>
-          <div id="walmart" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
-            <div class="accordion-body">
-              <ul>
-                <li>HTS code classification using Vision + NLP — live on Walmart Marketplace.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item bg-white text-dark filterable">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed bg-white text-dark" data-bs-toggle="collapse" data-bs-target="#amazon">Amazon — Data Scientist (2020–2022)</button>
-          </h2>
-          <div id="amazon" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
-            <div class="accordion-body">
-              <ul>
-                <li>Developed recommendation systems for e-commerce platform.</li>
-                <li>Implemented A/B testing frameworks for product optimization.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item bg-white text-dark filterable">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed bg-white text-dark" data-bs-toggle="collapse" data-bs-target="#microsoft">Microsoft — Data Scientist (2019–2020)</button>
-          </h2>
-          <div id="microsoft" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
-            <div class="accordion-body">
-              <ul>
-                <li>Worked on Azure ML services and cloud-based ML solutions.</li>
-                <li>Developed predictive models for customer behavior analysis.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item bg-white text-dark filterable">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed bg-white text-dark" data-bs-toggle="collapse" data-bs-target="#google">ZS Associates, Advanced Data Science Group - Data Science Associate Consultant (July 2019 - Dec 2021)</button>
-          </h2>
-          <div id="google" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
-            <div class="accordion-body">
-              <ul>
-                <li><strong>Rare Disease Patient Identification:</strong> Built a gradient boosting model using Positive-Unlabeled (PU) learning to identify
-                  patients with rare diseases via healthcare claims. Devised go-to-market (GTM) strategy for reps using prescribing patterns, increasing
-                  patient capture by 46% in the US Southeast region.</li>
-                <li><strong>NASH Patient Identification and Progression: </strong> Developed ML models to detect NASH patients using EHR and NIDDK datasets.
-                  Published findings in Nature Scientific Reports (NASHMap). Built a progression model to predict cirrhosis using Optum EHR data,
-                  published in Gastroenterology and Hepatology.</li>
-                  <li><strong>RA2 Dream Challenge: </strong> Represented ZS in a computer vision challenge predicting erosion and narrowing scores for rheumatoid arthritis
-                    patients from X-rays. Built a multi-stage pipeline using RetinaNet for joint detection and EfficientNet + attention for scoring.
-                    Secured 4th and 8th place among 1,000+ participants (Leaderboard), presented at RSG Dream Conference</li> 
-                  <li><strong>Unaddressed Opportunities: </strong>Built a multi-stage adaptive PU learning system to enrich claims data. Created targeting strategies
-                    for breast cancer therapies based on model scores, increasing coverage by 10%.<li>
-                  <li><strong>Achievements & Leadership: </strong>Got a fast track promotion within 1.5 years to DSAC, Mentored 3 DSAs to formulate, design, and deploy
-                    ML solutions while deepening domain expertise.<li>    
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="my-5" />
+    <hr class="my-4" />
 
     <!-- Publications -->
-    <section id="publications" class="mb-5">
-      <h2>Publications</h2>
-      <ul class="publication-list">
-        <li class="filterable">
-          Ranking and Clustering of Drosophila ORs — Elsevier
-          <a class="link-primary ms-2" href="https://www.sciencedirect.com/science/article/pii/S2772572323001462" target="_blank">see paper</a>
-        </li>
-        <li class="filterable">
-          RA2 Challenge — JAMA Network Open
-          <a class="link-primary ms-2" href="https://www.synapse.org/Synapse:syn20545111/wiki/597246" target="_blank">see paper</a>
-        </li>
-        <li class="filterable">
-          View all publications on Google Scholar
-          <a class="link-info ms-2" href="https://scholar.google.com/citations?user=yw7vKUsAAAAJ&hl=en" target="_blank">see profile</a>
-        </li>
-      </ul>
-    </section>
-
-    <hr class="my-5" />
-
-    <!-- Kaggle Projects -->
-    <section id="kaggle" class="mb-5">
-      <h2>Kaggle Projects</h2>
-      <div class="row">
-        <div class="col-md-6 mb-4 filterable">
-          <div class="card bg-white text-dark h-100">
-            <div class="card-body">
-              <h5 class="card-title">MICCAI Brain Tumor Classification</h5>
-              <p class="card-text">Bronze medal (Top 8%). CNN-LSTM with segmentation for radiogenomics.</p>
-              <a href="https://www.kaggle.com/neelambuj717" target="_blank" class="btn btn-primary">View Project</a>
+    <div class="section-bg publications-bg">
+      <section id="publications" class="mb-4">
+        <h2><i class="bi bi-journal-text me-2 text-primary"></i>Publications</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card publication-card h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-start mb-3">
+                  <i class="bi bi-file-earmark-text text-primary fs-4 me-3"></i>
+                  <div class="flex-grow-1">
+                    <h6 class="card-title fw-bold mb-1">Ranking and Clustering of Drosophila Olfactory Receptors using Mathematical Morphology</h6>
+                    <p class="text-muted small mb-2">Elsevier Journal</p>
+                    <span class="badge bg-outline-primary">Mathematical Morphology</span>
+                  </div>
+                </div>
+                <a class="btn btn-outline-primary btn-sm" href="https://www.sciencedirect.com/science/article/pii/S2772572323001462" target="_blank">
+                  <i class="bi bi-box-arrow-up-right me-1"></i>View Paper
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Add more cards if needed -->
-      </div>
-    </section>
-
-    <hr class="my-5" />
-
-    <!-- Education -->
-    <section id="education" class="mb-5">
-      <h2>Education</h2>
-      <ul>
-        <li class="filterable"><strong>M.Tech, AI & ML</strong> — BITS Pilani (WILP), 2023–2025</li>
-        <li class="filterable"><strong>B.Tech, IPE</strong> — NIT Jalandhar, 2015–2019, CGPA 7.86</li>
-      </ul>
-    </section>
-
-    <hr class="my-5" />
-
-    <!-- Contact Section at Bottom -->
-    <section id="contact" class="mb-5">
-      <h2>Get In Touch</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card bg-white text-dark">
-            <div class="card-body text-center">
-              <h5 class="card-title mb-4">Let's Connect!</h5>
-              <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="mailto:Neelambuj.nitj@gmail.com" class="btn btn-outline-primary btn-lg">
-                  <i class="bi bi-envelope-fill me-2"></i>Email
+          
+          <div class="col-md-6 mb-4">
+            <div class="card publication-card h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-start mb-3">
+                  <i class="bi bi-graph-up text-success fs-4 me-3"></i>
+                  <div class="flex-grow-1">
+                    <h6 class="card-title fw-bold mb-1">DeepRA: Predicting Rheumatoid Arthritis Progression from Joint-Level Radiographs</h6>
+                    <p class="text-muted small mb-2">ArXiv Preprint</p>
+                    <div class="d-flex gap-2 mb-2">
+                      <span class="badge bg-success">Impact Factor: 3.6</span>
+                      <span class="badge bg-outline-success">Computer Vision</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="btn btn-outline-success btn-sm" href="https://arxiv.org/pdf/2102.06982" target="_blank">
+                  <i class="bi bi-box-arrow-up-right me-1"></i>View Paper
                 </a>
-                <a href="https://github.com/NC717" target="_blank" class="btn btn-outline-dark btn-lg">
-                  <i class="bi bi-github me-2"></i>GitHub
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 mb-4">
+            <div class="card publication-card h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-start mb-3">
+                  <i class="bi bi-people text-warning fs-4 me-3"></i>
+                  <div class="flex-grow-1">
+                    <h6 class="card-title fw-bold mb-1">A crowdsourcing approach to develop machine learning models to quantify radiographic joint damage in rheumatoid arthritis</h6>
+                    <p class="text-muted small mb-2">Synapse Platform</p>
+                    <span class="badge bg-warning text-dark">Crowdsourcing</span>
+                  </div>
+                </div>
+                <a class="btn btn-outline-warning btn-sm" href="https://www.synapse.org/Synapse:syn20545111/wiki/597246" target="_blank">
+                  <i class="bi bi-box-arrow-up-right me-1"></i>View Paper
                 </a>
-                <a href="https://www.linkedin.com/in/neelambuj-chaturvedi-981425103/" target="_blank" class="btn btn-outline-primary btn-lg">
-                  <i class="bi bi-linkedin me-2"></i>LinkedIn
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 mb-4">
+            <div class="card publication-card h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-start mb-3">
+                  <i class="bi bi-google text-danger fs-4 me-3"></i>
+                  <div class="flex-grow-1">
+                    <h6 class="card-title fw-bold mb-1">View All Publications</h6>
+                    <p class="text-muted small mb-2">Google Scholar Profile</p>
+                    <span class="badge bg-danger">Complete Portfolio</span>
+                  </div>
+                </div>
+                <a class="btn btn-outline-danger btn-sm" href="https://scholar.google.com/citations?user=yw7vKUsAAAAJ&hl=en" target="_blank">
+                  <i class="bi bi-box-arrow-up-right me-1"></i>View Profile
                 </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+
+    <hr class="my-4" />
+
+    <!-- Kaggle Projects -->
+    <div class="section-bg kaggle-bg">
+      <section id="kaggle" class="mb-4">
+        <h2><i class="bi bi-trophy me-2 text-warning"></i>Kaggle Projects</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4 filterable">
+            <div class="card bg-white text-dark h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="bi bi-award text-warning fs-4 me-2"></i>
+                  <h5 class="card-title mb-0">MICCAI Brain Tumor Classification</h5>
+                </div>
+                <p class="card-text">Bronze medal (Top 8%). CNN-LSTM with segmentation for radiogenomics.</p>
+                <div class="d-flex gap-2 mb-3">
+                  <span class="badge bg-warning text-dark">Bronze Medal</span>
+                  <span class="badge bg-outline-primary">Top 8%</span>
+                  <span class="badge bg-outline-info">CNN-LSTM</span>
+                </div>
+                <a href="https://www.kaggle.com/neelambuj717" target="_blank" class="btn btn-primary">
+                  <i class="bi bi-box-arrow-up-right me-1"></i>View Project
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Add more cards if needed -->
+        </div>
+      </section>
+    </div>
+
+    <hr class="my-4" />
+
+    <!-- Education -->
+    <div class="section-bg education-bg">
+      <section id="education" class="mb-4">
+        <h2><i class="bi bi-mortarboard me-2 text-info"></i>Education</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card education-card h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="bi bi-graduation-cap text-info fs-4 me-3"></i>
+                  <div>
+                    <h6 class="card-title fw-bold mb-1">M.Tech, AI & ML</h6>
+                    <p class="text-muted small mb-0">BITS Pilani (WILP)</p>
+                  </div>
+                </div>
+                <p class="text-muted mb-2">2023–2025</p>
+                <span class="badge bg-info">Machine Learning</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 mb-4">
+            <div class="card education-card h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="bi bi-building text-primary fs-4 me-3"></i>
+                  <div>
+                    <h6 class="card-title fw-bold mb-1">B.Tech, IPE</h6>
+                    <p class="text-muted small mb-0">NIT Jalandhar</p>
+                  </div>
+                </div>
+                <p class="text-muted mb-2">2015–2019</p>
+                <div class="d-flex gap-2">
+                  <span class="badge bg-primary">Industrial Engineering</span>
+                  <span class="badge bg-success">CGPA: 7.86</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <hr class="my-4" />
+
+    <!-- Contact Section at Bottom -->
+    <div class="section-bg contact-bg">
+      <section id="contact" class="mb-4">
+        <h2><i class="bi bi-chat-dots me-2 text-success"></i>Get In Touch</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card contact-card">
+              <div class="card-body text-center p-5">
+                <div class="mb-4">
+                  <i class="bi bi-envelope-paper text-success fs-1 mb-3"></i>
+                  <h3 class="card-title mb-3">Let's Connect!</h3>
+                  <p class="text-muted">Ready to collaborate on exciting ML projects? Let's discuss how we can work together!</p>
+                </div>
+                
+                <div class="row g-4 mb-4">
+                  <div class="col-md-4">
+                    <div class="contact-item">
+                      <i class="bi bi-envelope-fill text-primary fs-3 mb-2"></i>
+                      <h6>Email</h6>
+                      <p class="text-muted small">Let's start a conversation</p>
+                      <a href="mailto:Neelambuj.nitj@gmail.com" class="btn btn-outline-primary">
+                        <i class="bi bi-envelope me-1"></i>Send Email
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                    <div class="contact-item">
+                      <i class="bi bi-github text-dark fs-3 mb-2"></i>
+                      <h6>GitHub</h6>
+                      <p class="text-muted small">Check out my projects</p>
+                      <a href="https://github.com/NC717" target="_blank" class="btn btn-outline-dark">
+                        <i class="bi bi-github me-1"></i>View Profile
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                    <div class="contact-item">
+                      <i class="bi bi-linkedin text-primary fs-3 mb-2"></i>
+                      <h6>LinkedIn</h6>
+                      <p class="text-muted small">Connect professionally</p>
+                      <a href="https://www.linkedin.com/in/neelambuj-chaturvedi-981425103/" target="_blank" class="btn btn-outline-primary">
+                        <i class="bi bi-linkedin me-1"></i>Connect
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="alert alert-light border">
+                  <i class="bi bi-info-circle text-info me-2"></i>
+                  <strong>Available for:</strong> ML consulting, research collaborations, and exciting data science opportunities
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
